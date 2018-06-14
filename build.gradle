@@ -5,9 +5,11 @@ allprojects {
 }
 
 subprojects {
-    version = '1.0'
+    dependencyLocking {
+        lockAllConfigurations()
+    }
 }
 
-dependencyLocking {
-    lockAllConfigurations()
+task allDependencies {
+    dependsOn allprojects.collect { "$it.path:dependencies" }
 }
