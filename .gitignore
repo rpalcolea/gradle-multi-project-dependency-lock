@@ -1,0 +1,8 @@
+build
+classes
+/.gradle
+/.idea
+/profile-out
+/profile-out-*
+/foobar
+/gradle-user-home
